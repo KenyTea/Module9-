@@ -13,19 +13,19 @@ namespace Beckub_Copy.Models
 Все три класса являются производными от абстрактного класса «Носитель информации» — класс «Storage». Базовый класс («Storage») содержит следующие закрытые поля:
 */
 
-        public enum TypeFlash { USB2, USB3}
+        public enum TypeDevice { USB2, USB3}
     public class Flash : Storage
     {
         public int SpeedFlash { get; private set; }
-        public int Memory { get; set; }
-        public TypeFlash typeFlash {
+        public double MemoryFlash { get; set; }
+        public TypeDevice typeDevice {
             get
             {
-                return typeFlash;
+                return typeDevice;
             }
             set
             {
-                if (TypeFlash.USB2 == value)
+                if (TypeDevice.USB2 == value)
                 {
                     SpeedFlash = 2000;
                 }
@@ -36,12 +36,14 @@ namespace Beckub_Copy.Models
 
         public override double GetMemory()
         {
-            return 0;
+            return MemoryFlash;
         }
 
         public override void PrintInfo()
         {
             throw new NotImplementedException();
         }
+
+        
     }
 }

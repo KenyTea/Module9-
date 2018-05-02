@@ -44,6 +44,7 @@
     <Compile Include="Models\DVD.cs" />
     <Compile Include="Models\Flash.cs" />
     <Compile Include="Models\HDD.cs" />
+    <Compile Include="Models\Service.cs" />
     <Compile Include="Models\Storage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

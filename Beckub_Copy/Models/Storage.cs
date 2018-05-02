@@ -18,6 +18,7 @@ namespace Beckub_Copy.Models
 */
     public abstract class Storage
     {
+        public int Count { get; set; } // колличество устройств
         public int Time { get; set; }
 
         protected string Name { get; set; }
@@ -31,6 +32,7 @@ namespace Beckub_Copy.Models
             Time = 2;
         }
 
+  
         public abstract void PrintInfo();
     }
 }

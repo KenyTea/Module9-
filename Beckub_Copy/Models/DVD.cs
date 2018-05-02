@@ -12,7 +12,7 @@ namespace Beckub_Copy.Models
 ●	класс съемный HDD — класс «HDD».
 Все три класса являются производными от абстрактного класса «Носитель информации» — класс «Storage». Базовый класс («Storage») содержит следующие закрытые поля:
 */
-        public enum TypeDVD { Oneside, TwoSide}
+    public enum TypeDVD { Oneside, TwoSide }
     public class DVD : Storage
     {
         public int SpeedWrite { get; set; }
@@ -27,17 +27,20 @@ namespace Beckub_Copy.Models
 
         public override double GetMemory()
         {
-            return 0;
+            if (TypeDVD.Oneside == typeDVD)
+                return 4.7;
+            else
+                return 9.4;
         }
 
         public override void Copy()
         {
-           // base.Copy();
+            // base.Copy();
         }
 
         public override void PrintInfo()
         {
-           
+
         }
 
     }

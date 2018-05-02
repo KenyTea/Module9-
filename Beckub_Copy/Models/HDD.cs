@@ -14,5 +14,19 @@ namespace Beckub_Copy.Models
 */
     public class HDD : Storage
     {
+        public int SpeedHDD { get; set; }
+        public TypeDevice typeDevice { get; set; }
+        public int  Claster { get; set; }
+        public int ClasterMomory { get; set; }
+
+        public override double GetMemory()
+        {
+            return ClasterMomory;
+        }
+
+        public override void PrintInfo()
+        {
+            
+        }
     }
 }

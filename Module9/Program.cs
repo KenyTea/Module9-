@@ -11,9 +11,7 @@ namespace Module9 // Наследование
     {
         static void Main(string[] args)
         {
-            Storage storage = new Storage();
-
-            storage.
+          
         }
     }
 }
