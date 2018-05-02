@@ -69,6 +69,10 @@ namespace Beckub_Copy.Models
             return TimeSpan.FromMilliseconds(sum);
         } //●	расчет времени необходимого для копирования;
 
+        //private int DevoceCounter(Flash flash, double MemirtData, out int count) // out int count -  возвращает в переменную
+        //{
+        //    count = Int32.Parse(Math.Ceiling((MemirtData / flash.MemoryFlash)).ToString()); // конвертор БЛЯ + округлитель
+        //}
 
         private int DevoceCounter( Flash flash, double MemirtData) // out int count -  возвращает в переменную
         {
