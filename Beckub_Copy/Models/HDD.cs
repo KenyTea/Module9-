@@ -26,7 +26,7 @@ namespace Beckub_Copy.Models
 
         public override void PrintInfo()
         {
-            
+            Console.WriteLine();
         }
     }
 }

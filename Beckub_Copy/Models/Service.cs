@@ -73,33 +73,47 @@ namespace Beckub_Copy.Models
         //{
         //    count = Int32.Parse(Math.Ceiling((MemirtData / flash.MemoryFlash)).ToString()); // конвертор БЛЯ + округлитель
         //}
-
+        //----------------------------------------------------------------------------------------------------------------------------
         private int DevoceCounter( Flash flash, double MemirtData) // out int count -  возвращает в переменную
         {
               return Int32.Parse( Math.Ceiling((MemirtData / flash.MemoryFlash)).ToString()); // конвертор БЛЯ + округлитель
         }
 
-        private int DevoceCounter(ref DVD dvd, double MemirtData) // ref ссылка !!!!!!!!!!!!!!!!!!!
-        {
-            return  Int32.Parse(Math.Ceiling((MemirtData / dvd.GetMemory())).ToString()); // конвертор БЛЯ + округлитель
-            
-        }
-
-        private int DevoceCounter(ref HDD hdd, double MemirtData) // ref ссылка !!!!!!!!!!!!!!!!!!!
-        {
-            return  Int32.Parse(Math.Ceiling((MemirtData / hdd.GetMemory())).ToString()); // конвертор БЛЯ + округлитель
-        }
-
-         public int GetCount(List<Flash> flash, double MemoriData)
+         public void GetCount(List<Flash> flash, double MemoriData)
         {
 
             foreach (Flash item in flash)
             {
                item.Count =  DevoceCounter( item, MemoriData);
             }
-
-            return 0;
+        }
+//------------------------------------------------------------------------------------------------------------------------------------
+        private int DevoceCounter( DVD dvd, double MemirtData) // ref ссылка !!!!!!!!!!!!!!!!!!!
+        {
+            return  Int32.Parse(Math.Ceiling((MemirtData / dvd.GetMemory())).ToString()); // конвертор БЛЯ + округлитель   
         }
 
+        public void GetCount(List<DVD> dvd, double MemoriData)
+        {
+
+            foreach (DVD item in dvd)
+            {
+                item.Count = DevoceCounter(item, MemoriData);
+            }
+        }
+        //----------------------------------------------------------------------------------------------------------------------------
+        private int DevoceCounter( HDD hdd, double MemirtData) // ref ссылка !!!!!!!!!!!!!!!!!!!
+        {
+            return  Int32.Parse(Math.Ceiling((MemirtData / hdd.GetMemory())).ToString()); // конвертор БЛЯ + округлитель
+        }
+
+        public void GetCount(List<HDD> hdd, double MemoriData)
+        {
+
+            foreach (HDD item in hdd)
+            {
+                item.Count = DevoceCounter(item, MemoriData);
+            }
+        }
     }
 }
