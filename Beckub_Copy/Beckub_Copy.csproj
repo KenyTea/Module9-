@@ -40,7 +40,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="GenerateDevice.cs" />
     <Compile Include="Models\DVD.cs" />
     <Compile Include="Models\Flash.cs" />
