@@ -26,7 +26,12 @@ namespace Beckub_Copy.Models
 
         public override void PrintInfo()
         {
-            Console.WriteLine();
+            base.PrintInfo(); // вызываем то, что есть в Printinfo в базовом классе
+
+            Console.WriteLine("Speed HDD -" + SpeedHDD);
+            Console.WriteLine("Type device -" + typeDevice);
+            Console.WriteLine("Claster -" + typeDevice);
+            Console.WriteLine("Claster Momory - " + ClasterMomory);
         }
     }
 }

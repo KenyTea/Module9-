@@ -33,6 +33,10 @@ namespace Beckub_Copy.Models
         }
 
   
-        public abstract void PrintInfo();
+        public virtual void PrintInfo()
+        {
+            Console.WriteLine("Name -" + Name);
+            Console.WriteLine("Model -" + Model);
+           
     }
 }

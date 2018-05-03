@@ -41,7 +41,11 @@ namespace Beckub_Copy.Models
 
         public override void PrintInfo()
         {
-            throw new NotImplementedException();
+            base.PrintInfo(); // вызываем то, что есть в Printinfo в базовом классе
+
+            Console.WriteLine("Speed Flash -" + SpeedFlash);
+            Console.WriteLine("Memory Flash -" + MemoryFlash);
+            Console.WriteLine("Type Device -" + typeDevice);
         }
 
         

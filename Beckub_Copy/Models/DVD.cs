@@ -40,7 +40,11 @@ namespace Beckub_Copy.Models
 
         public override void PrintInfo()
         {
+            base.PrintInfo(); // вызываем то, что есть в Printinfo в базовом классе
 
+            Console.WriteLine("Speed Write -" + SpeedWrite);
+            Console.WriteLine("Speed Read -" + SpeedRead);
+            Console.WriteLine("Type DVD -" + typeDVD);
         }
 
     }
