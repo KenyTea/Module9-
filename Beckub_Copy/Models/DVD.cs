@@ -16,6 +16,19 @@ namespace Beckub_Copy.Models
     public enum TypeDVD { Oneside, TwoSide }
     public class DVD : Storage
     {
+        public DVD() : this(0)
+        {
+
+        }
+        public DVD(int SpeedWrite) : this(SpeedWrite, TypeDVD.Oneside)
+        {
+
+        }
+        public DVD(int SpeedWrite, TypeDVD typeDVD) : base()
+        {
+            this.SpeedWrite = SpeedWrite;
+            this.typeDVD = typeDVD;
+        }
         public int SpeedWrite { get; set; }
         public int SpeedRead { get; set; }
         public TypeDVD typeDVD { get; set; }

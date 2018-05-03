@@ -17,15 +17,11 @@ namespace Beckub_Copy.Models
     {
         private TypeDevice uSB2;
 
-        public HDD() : this(0)
-        {
+        public HDD() : this(0) { }
 
-        }
-        public HDD(int SpeedHDD) : this(SpeedHDD, TypeDevice.USB2)
-        {
-            
-        }
-        public HDD(int SpeedHDD, TypeDevice typeDevice)
+        public HDD(int SpeedHDD) : this(SpeedHDD, TypeDevice.USB2) { }
+       
+        public HDD(int SpeedHDD, TypeDevice typeDevice) : base() // -  вызавет констрруктор Storage
         {
             this.SpeedHDD = SpeedHDD;
             this.typeDevice = typeDevice;

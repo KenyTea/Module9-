@@ -17,6 +17,23 @@ namespace Beckub_Copy.Models
         public enum TypeDevice { USB2, USB3}
     public class Flash : Storage
     {
+        public Flash(string model) : base(" ", model)
+        {
+
+        }
+        public Flash() : this(0)
+        {
+
+        }
+        public Flash(int SpeedFlash) : this(SpeedFlash, 0)
+        {
+
+        }
+        public Flash(int SpeedFlash, double MemoryFlash) : base()
+        {
+            this.SpeedFlash = SpeedFlash;
+            this.MemoryFlash = MemoryFlash;
+        }
         public int SpeedFlash { get; private set; }
         public double MemoryFlash { get; set; }
         public TypeDevice typeDevice {

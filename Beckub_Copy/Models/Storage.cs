@@ -32,7 +32,7 @@ namespace Beckub_Copy.Models
             this.Model = Model;
         }
         public int Count { get; set; } // колличество устройств
-        public int Time { get; set; }
+        public static int Time { get; set; }
 
         protected string Name { get; set; }
         public string Model { get; protected set; }
@@ -40,13 +40,18 @@ namespace Beckub_Copy.Models
         public abstract double GetMemory();
 
         public abstract void Copy();
-        
 
-  
+
+
         public virtual void PrintInfo()
         {
             Console.WriteLine("Name -" + Name);
             Console.WriteLine("Model -" + Model);
-           
+
+        }
+        public static void PrintName()
+        {
+            Console.WriteLine("Time -" + Time);
+        }
     }
 }
