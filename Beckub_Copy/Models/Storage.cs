@@ -18,6 +18,19 @@ namespace Beckub_Copy.Models
 */
     public abstract class Storage
     {
+        public Storage() : this("")
+        {
+
+        }
+        public Storage(string Name) : this(Name, "")
+        {
+
+        }
+        public Storage(string Name, string Model)
+        {
+            this.Name = Name;
+            this.Model = Model;
+        }
         public int Count { get; set; } // колличество устройств
         public int Time { get; set; }
 
@@ -26,11 +39,8 @@ namespace Beckub_Copy.Models
 
         public abstract double GetMemory();
 
-        public virtual void Copy()
-        {
-            Console.WriteLine("Copy start");
-            Time = 2;
-        }
+        public abstract void Copy();
+        
 
   
         public virtual void PrintInfo()

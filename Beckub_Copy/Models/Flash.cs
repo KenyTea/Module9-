@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Beckub_Copy.Models
@@ -48,6 +49,16 @@ namespace Beckub_Copy.Models
             Console.WriteLine("Type Device -" + typeDevice);
         }
 
-        
+        public override void Copy() //●	копирование информации на устройства;
+        {
+            int sum = (int)MemoryFlash / SpeedFlash;
+
+            for (int i = 0; i < sum; i++)
+            {
+                Console.WriteLine(".");
+                Thread.Sleep(500); // засыпание на 500 мили сек.
+            }
+        }
+
     }
 }

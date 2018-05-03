@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Beckub_Copy.Models
@@ -33,9 +34,15 @@ namespace Beckub_Copy.Models
                 return 9.4;
         }
 
-        public override void Copy()
+        public sealed override void Copy()   // sealed - запечатываем метод и никто из наследников  ни кто не может изменить его
         {
-            // base.Copy();
+            int sum = (int)GetMemory() / SpeedWrite;
+
+            for (int i = 0; i < sum; i++)
+            {
+                Console.WriteLine(".");
+                Thread.Sleep(500); // засыпание на 500 мили сек.
+            }
         }
 
         public override void PrintInfo()
@@ -46,7 +53,6 @@ namespace Beckub_Copy.Models
             Console.WriteLine("Speed Read -" + SpeedRead);
             Console.WriteLine("Type DVD -" + typeDVD);
         }
-
     }
 
 }
