@@ -15,9 +15,9 @@ namespace Beckub_Copy
             dvd = new List<DVD>();
             flash = new List<Flash>();
         }
-        public List<HDD> hdd { get; set; }
-        public List<DVD> dvd { get; set; }
-        public List<Flash> flash { get; set; }
+        public List<HDD> hdd;
+        public List<DVD> dvd;
+        public List<Flash> flash;
         private Random rand = new Random();
         public void GenarateFlash()
         {
@@ -29,5 +29,17 @@ namespace Beckub_Copy
                 flash.Add(f);
             }
         }
+
+        //public void GenarateHdd()
+        //{
+        //    for (int i = 0; i < rand.Next(1, 20); i++)
+        //    {
+        //        HDD h = new HDD()
+        //            h.
+        //        f.MemoryFlash = rand.Next(2000, 128000);
+        //        f.typeDevice = (TypeDevice)rand.Next(0, 1);
+        //        flash.Add(f);
+        //    }
+        //}
     }
 }

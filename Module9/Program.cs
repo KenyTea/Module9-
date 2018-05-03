@@ -25,7 +25,11 @@ namespace Module9 // Наследование
             Console.WriteLine("Общий объём флэшак = {0} ({1}) ", totalmemory , gener.flash.Count); ;
             TimeSpan time = serv.CalculateTotalTime(gener.flash);
             Console.WriteLine(time.TotalMinutes);
-            serv.GetCount(gener.flash, )
+            serv.GetCount(gener.flash, temp);
+            foreach (Flash item in gener.flash)
+            {
+                item.PrintInfo();
+            }
         }
     }
 }

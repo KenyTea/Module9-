@@ -36,13 +36,16 @@ namespace Beckub_Copy.Models
         }
         public int SpeedFlash { get; private set; }
         public double MemoryFlash { get; set; }
+
+        private TypeDevice typeDevice_;
         public TypeDevice typeDevice {
             get
             {
-                return typeDevice;
+                return typeDevice_;
             }
             set
             {
+                typeDevice_ = value;
                 if (TypeDevice.USB2 == value)
                 {
                     SpeedFlash = 2000;
